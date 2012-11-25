@@ -1,0 +1,13 @@
+<div class="banner bannerflash" style="height: {{ banner.height }}px">
+	<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+	codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version={{ banner.flash_ver }}" 
+	WIDTH="{{ banner.width }}" HEIGHT="{{ banner.height }}" 
+	id="banner-{{ banner.slug }}">
+	<PARAM NAME="movie" VALUE="{{ banner.flash.url }}"/>
+	<PARAM NAME="quality" VALUE="high"/>
+	<PARAM NAME="bgcolor" VALUE="{{ banner.bgcolor }}"/>
+	<EMBED src="{{ banner.flash.url }}" quality="high" bgcolor="{{ banner.bgcolor }}" WIDTH="{{ banner.width }}" HEIGHT="{{ banner.height }}" 
+	NAME="banner-{{ banner.slug }}" ALIGN="" TYPE="application/x-shockwave-flash" 
+	PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
+	</OBJECT>
+</div>

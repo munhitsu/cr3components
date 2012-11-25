@@ -1,0 +1,10 @@
+{% extends "cms/base.html" %}
+{% load markitup_tags %}
+
+{% block title %}{{ site_title }}{{ node.trans.title }}{% endblock title %}
+
+{% block body %}
+<h1>{{ node.trans.title }}</h1>
+{{ node.trans.content|default_if_none:""|render_markup|safe }}
+{{ node.admin_edit_inline }}
+{% endblock body %}

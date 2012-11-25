@@ -1,0 +1,10 @@
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version={{ item.flash_ver }},0,40,0" 
+width="{{ item.width }}" height="{{ item.height }}" id="item-{{ item.slug }}">
+<param name="movie" value="{{ item.flash.url }}"/>
+<param name="quality" value="high"/>
+<param name="bgcolor value="{{ item.bgcolor }}"/>
+<embed src="{{ item.flash.url }}" quality="high" bgcolor="{{ item.bgcolor }}" width="{{ item.width }}" height="{{ item.height }}"
+name="item-{{ item.slug }}" align="" type="application/x-shockwave-flash"
+pluginspage="http://www.macromedia.com/go/getflashplayer"/>
+</object>

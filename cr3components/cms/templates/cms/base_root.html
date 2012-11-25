@@ -1,0 +1,42 @@
+{% extends "cms/base.html" %}
+{% load markitup_tags %}
+{% load cms_tags %}
+{% load banners_tags %}
+
+{% block body %}
+
+{% bannerroll 'rolka' %}
+
+<h1>root nodes</h1>
+{% for node in root_nodes %}
+	<a href="{{node.get_absolute_url}}">{{node.slug}}</a> -> {{node.trans.title}} {{ node.admin_edit_inline }}
+	<br/>
+{% endfor %}
+
+
+
+<h1>node publikacje</h1>
+{% cms "publikacje" as node %}
+	treść:
+	<div>
+		{{ node.trans.content|default_if_none:""|render_markup|safe }}
+	</div>
+	{% for node in node %}
+		<a href="{{node.get_absolute_url}}">{{node.slug}} -> {{node.trans.title}}</a>
+		<br/>
+	{% endfor %}
+{% endcms %}
+
+<h1>all posts from category node wiadomosci</h1>
+{% cms "wiadomosci" as node %}
+	{{node.slug}}
+	<p>
+	{% for node in node.get_published_children %}
+		<a href="{{node.get_absolute_url}}">{{node.slug}}</a> -> {{node.trans.title}}
+		<br/>
+	{% endfor %}
+	</p>
+{% endcms %}
+
+
+{% endblock body %}

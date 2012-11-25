@@ -1,0 +1,59 @@
+logging ? - user reachable
+
+Page/story (time based)
+blog entry
+
+
+poll
+
+
+teaser instead brief
+
+
+weight/priority
+
+
+
+reqs:
+story with timeout
+page
+
+all items in any amount of categories
+
+
+node has language variants
+
+node:
+ - page
+ - story
+ - blog entry
+
+
+cms:
+on create category/page create apprpriate permisions
+content approval flow?
+
+
+cms api:
+
+rss?
+
+
+v2:
+version control
+
+
+banners api:
+ banner slug_name
+
+banner_roll
+
+search api:
+
+settings.py
+MIDDLEWARE = ( 'search.milleware.....',
+)
+
+from search import search
+search.register(YourModel)
+
