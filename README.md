@@ -1,5 +1,3 @@
 cr3components
 =============
-various legacy components and 
-
-a good mine of code snippets
+various legacy django components and a gold mine for code snippets
